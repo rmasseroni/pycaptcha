@@ -13,9 +13,9 @@ Some constraints:
 We expect you to write automated tests for your project.
 
 ---
-#Docs
+# Docs
 
-###Retrieving CAPTCHA
+### Retrieving CAPTCHA
 ```
 GET /
 ```
@@ -37,7 +37,7 @@ Body:
    "uuid": "600f2d2c-fe27-4097-9269-e27b52398aca" //Form ID
 }
 ```
-###Validating the CAPTCHA
+### Validating the CAPTCHA
 `POST /`
 
 Validate the form CAPTCHA image.
@@ -70,9 +70,9 @@ Body:
 ```
 
 ---
-#Local startup
+# Local startup
 
-###Steps to build and run the docker image
+### Steps to build and run the docker image
 - Build the image with the following command:
     ```
     $ docker build -t python-captcha .
@@ -85,7 +85,7 @@ Body:
 
 - You should reach the service at `http://localhost:8080` 
 
-###Testing services
+### Testing services
 
 You can cURL the following endpoint to retrieve a captcha image:
 
@@ -111,7 +111,7 @@ curl -X POST localhost:8080 \
 In case of valid CAPTCHA you will get `200` as status code with a message (_Valid captcha_), otherwise you will get a `400` status code with a message indicating which kind of error happened.
 
 ---
-#Notes
+# Notes
 For the convenience of the poc it was chosen to use SQLite.
 
 On a cloud infrastructure it will be necessary to integrate server a database.
